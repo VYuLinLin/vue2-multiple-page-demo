@@ -1,6 +1,6 @@
 # vue2-multiple-page-demo
 
-> 一个基于vue架构的多页面架构应用
+> 一个基于vue2 + webpack模板的多页面架构配置
 
 ## Build Setup
 
