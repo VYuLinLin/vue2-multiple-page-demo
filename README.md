@@ -27,8 +27,6 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
 ## 第一步 首先请看一下我的项目结构目录，并增加类似 multiplePages 结构的目录
 ![目录结构](https://github.com/VYuLinLin/vue2-multiple-page-demo/blob/master/src/assets/directory.png)
 
@@ -47,11 +45,11 @@ module.exports = {
   // },
   entry: entrys,
 ```
-getFilePathObj 是一个获取模块下的指定文件的方法，比如：以上的entrys变量就是获取 multiplePages 文件夹子级文件夹下面的所有main.js入口。
+getFilePathObj 是自己定义的一个获取模块下的指定文件的方法，比如：以上的entrys变量就是获取 multiplePages 文件夹子级文件夹下面的所有main.js入口。
 代码如下：
 ```js
 // 以下为新增部分
-// 获取文件夹下的文件路径对象集合
+// 获取文件夹下的文件路径对象集合，注意： 如果项目没用到glob模块，需要先npm i --save-dev glob
 const glob = require('glob')
 exports.getFilePathObj = (pathStr) => {
   const entries = glob.sync(pathStr).reduce((result, entry) => {
@@ -144,5 +142,11 @@ output: {
 ```
 
 ### 以上就是vue2框架利用vue-cli中得webpack模板打包成多页面的配置修改
-### 顺序就是增加多页面目录结构 —— 修改统一的多入口配置 —— 修改不同环境的html生成配置 —— 修改出口配置中的路径参数
+
+### 顺序就是
+增加多页面目录结构
+修改统一的多入口配置
+修改不同环境的html生成配置
+修改出口配置中的路径参数
+
 # 完毕
