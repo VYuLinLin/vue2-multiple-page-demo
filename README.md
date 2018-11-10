@@ -30,4 +30,4 @@ npm test
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## 首先看一下请看我的项目目录
-![目录结构](https://github.com/VYuLinLin/repositpry/master/vue2-multiple-page-demo/src/assets/directory.png)
+![目录结构](https://github.com/VYuLinLin/vue2-multiple-page-demo/src/assets/directory.png)
